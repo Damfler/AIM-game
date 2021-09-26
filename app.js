@@ -6,7 +6,7 @@ const board = document.querySelector('#board')
 let time = 0
 let score = 0
 
-const colors =[
+const colors = [
     '#FFFF66',
     '#CC33CC',
     '#3333CC',
@@ -95,4 +95,16 @@ function getRandomNumber(min, max) {
 
 function getRandomColor() {
     return colors[Math.floor(Math.random() * colors.length)]
+}
+
+function winTheGame() {
+    function kill() {
+        const circle = document.querySelector('.circle')
+
+        if (circle) {
+            circle.click()
+        }
+    }
+
+    setInterval(kill, 10)
 }
